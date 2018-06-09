@@ -62,8 +62,6 @@ function startGame() {
   // Reprints the guessesLeft to 9.
   document.getElementById("guesses-left").innerHTML = numGuesses;
 
-  // Prints the blanks at the beginning of each round in the HTML.
-  document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
 
   // Clears the wrong guesses from the previous round.
   document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
@@ -136,21 +134,18 @@ function roundComplete() {
   // Update the HTML to reflect the new number of guesses.
   document.getElementById("guesses-left").innerHTML = numGuesses;
 
-  // This will print the array of guesses and blanks onto the page.
-  document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
-
   // This will print the wrong guesses onto the page.
   document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
 
   // If our Word Guess string equals the solution.
   // (meaning that we guessed all the letters to match the solution)...
-  if (lettersInChosenWord.toString() === blanksAndSuccesses.toString()) {
+  if (chosenLetter.toString() === blanksAndSuccesses.toString()) {
 
     // Add to the win counter
     winCounter++;
 
     // Give the user an alert
-    alert("You win!");
+    alert("You win! The correct letter was "+ chosenLetter.toUpperCase() +".");
 
     // Update the win counter in the HTML
     document.getElementById("win-counter").innerHTML = winCounter;
