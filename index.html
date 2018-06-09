@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset='UTF-8'>
+    <title>Psychic Game</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  </head>
+
+  <body>
+
+    <!-- Bootstrap Container will hold everything. -->
+    <div class="container">
+
+      <!-- Jumbotron holds the title section. -->
+      <div class='jumbotron'>
+        <div class='container'>
+          <h1>Psychic Game</h1>
+          <h2>Guess what letter I'm thinking of!</h2>
+          <small>Click any letter to begin...</small>
+        </div>
+      </div>
+
+      <!-- Game counters held here. cards are being used to hold various sections. -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          
+
+          <!-- First card: Holds the letter most recently guessed. -->
+          <div class="card card-default">
+            <div class="card-heading">
+              <h3 class="card-title"><strong>Letter to Guess</strong></h3>
+            </div>
+
+            <div class="card-body">
+
+              <!-- This h3 section called word-blanks will hold the letter the user has most recently guessed -->
+              <h3 id="word-blanks">_ </h3>
+
+            </div>
+
+          </div>
+
+            <!-- First card: Holds the number of Wins. -->
+            <div class="card card-default">
+
+                    <div class="card-body">
+        
+                      <!-- This span called win-counter will hold the total number of wins for the games the user has played. -->
+                      <strong>Wins: </strong> <span id="win-counter">0</span>
+        
+                    </div>
+    
+              </div>
+
+                <!-- Second card: Holds the number of Losses. -->
+          <div class="card card-default">
+                <div class="card-body">
+    
+                  <!-- This span called loss-counter is where we"ll be dumping the number of losses. Pay attention to the id called ****loss-counter***; we"ll be referencing this in the JavaScript. -->
+                  <strong>Losses: </strong> <span id="loss-counter">0</span>
+    
+                </div>
+    
+              </div>
+
+               <!-- Third card: Holds the Number of Remaining Guesses. -->
+          <div class="card card-default">
+                <div class="card-body">
+    
+                  <!-- This span called guesses-left will hold the remaining guesses of the current round. The user will get 10 guesses per round. -->
+                  <strong>Guesses Left: </strong> <span id="guesses-left">9</span>
+    
+                </div>
+    
+              </div>
+
+          <!-- Fourth card: Holds the list of letters the user has guessed during the current round of the game. -->
+          <div class="card card-default">
+            <div class="card-body">
+
+              <!-- This span section called wrong-guesses will hold the wrong guesses of the current round. -->
+              <strong>Your Guesses So Far: </strong> <span id="wrong-guesses"></span>
+
+            </div>
+          </div>
+
+         
+
+          
+
+        
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Adds a link to the JavaScript file. Loaded at the bottom so it waits for the HTML content to display first. -->
+    <script src="javascript/game.js"></script>
+
+  </body>
+
+</html>
